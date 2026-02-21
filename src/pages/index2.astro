@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import logo from "../assets/logo.png";
+import logo2 from "../assets/logo3.png";
+import logo4 from "../assets/logo4.png";
+import logo5 from "../assets/logo5.png";
+---
+
+<BaseLayout>
+
+  <header class="flex justify-between items-center px-10 h-16 bg-black/90 border-b border-blue-900">
+  <img src={logo5.src} alt="NMV Logo" class="h-16 w-auto" />
+
+  <a href="https://wa.me/50671115299"
+     target="_blank"
+     class="bg-cyan-500 text-black px-5 py-2 rounded-sm hover:bg-cyan-400 transition font-medium tracking-wide">
+     CONTACTAR
+  </a>
+</header>
+
+<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+
+  <!-- Fondo blueprint -->
+  <div class="absolute inset-0 bg-gradient-to-br from-[#0b1e3d] to-[#0f172a]"></div>
+
+  <!-- Líneas técnicas -->
+  <!--<div class="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#ffffff22_1px,transparent_1px),linear-gradient(to_bottom,#ffffff22_1px,transparent_1px)] bg-[size:60px_60px]"></div>-->
+  <div class="absolute inset-0 opacity-20">
+
+  <svg class="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="none">
+
+    <defs>
+      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M 60 0 L 0 0 0 60"
+              fill="none"
+              stroke="white"
+              stroke-width="0.5"
+              class="draw-line"/>
+      </pattern>
+    </defs>
+
+    <rect width="100%" height="100%" fill="url(#grid)" />
+
+  </svg>
+
+</div>
+
+  <!-- Contenido -->
+  <!--<div class="relative z-10 max-w-3xl">-->
+  <div class="relative z-10 max-w-3xl animate-fade-in">
+
+    <!--<img src={logo.src} alt="NMV Logo" class="w-40 mx-auto mb-10 opacity-90" />-->
+	<img src={logo.src}
+     class="w-40 mx-auto mb-10 opacity-0 animate-logo" />
+
+    <!--<h1 class="text-5xl md:text-6xl font-light tracking-wider mb-6 text-cyan-400">-->
+	<h1 class="text-5xl md:text-6xl font-light tracking-widest mb-6 text-cyan-400 opacity-0 animate-title">
+      Diseño Constructivo y Electromecánico
+    </h1>
+
+    <p class="text-blue-200 text-lg mb-10">
+      Desarrollo profesional de planos arquitectónicos y electromecánicos en AutoCAD,
+      bajo precisión técnica y normativa vigente.
+    </p>
+
+    <a href="https://wa.me/50671115299"
+       target="_blank"
+       class="border border-cyan-400 text-cyan-400 px-8 py-3 hover:bg-cyan-400 hover:text-black transition tracking-wide">
+       SOLICITAR COTIZACIÓN
+    </a>
+
+  </div>
+
+</section>
+
+<footer class="py-10 text-center text-blue-400 text-sm bg-[#0b1e3d] border-t border-blue-900">
+  © 2026 Natalia Morales Vargas · Diseño Técnico Arquitectónico
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/50671115299"
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 w-16 h-16 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition text-2xl">
+   💬
+</a>
+
+</BaseLayout>
